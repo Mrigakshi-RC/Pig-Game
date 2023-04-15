@@ -1,5 +1,6 @@
 'use strict';
 let  diceBtn= document.querySelector(".btn--roll");
+let holdBtn=document.querySelector(".btn--hold");
 let scoreTable={"user1":0,"user2":0};
 let currentUser="user1";
 
@@ -25,12 +26,18 @@ function resetScore(user){
     scoreTable[user]=0;
     if (user==="user1"){
         document.querySelector("#score--0").innerText=0;
-        currentUser="user2";
     }
     else{
         document.querySelector("#score--1").innerText=0;
-        currentUser="user1";
     }
+    switchPlayer();
+}
+
+function switchPlayer(){
+    if (currentUser==="user1")
+    currentUser="user2";
+    else
+    currentUser="user1";
 }
 
 diceBtn.addEventListener("click",changeImage);
