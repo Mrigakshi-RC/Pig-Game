@@ -34,10 +34,25 @@ function resetScore(user){
 }
 
 function switchPlayer(){
-    if (currentUser==="user1")
-    currentUser="user2";
-    else
-    currentUser="user1";
+    if (currentUser==="user1"){
+        currentUser="user2";
+        document.querySelector(".player--1").classList.add("player--active");
+        document.querySelector(".player--0").classList.remove("player--active");
+    }
+    else{
+        currentUser="user1";
+        document.querySelector(".player--0").classList.add("player--active");
+        document.querySelector(".player--1").classList.remove("player--active");
+    }
 }
 
+// function winGame(){
+//     if (currentUser==="user1"){
+//         currentUser="user2";
+//         document.querySelector(".player--1").classList.add("player--active");
+//         document.querySelector(".player--0").classList.remove("player--active");
+//     }
+// }
+
 diceBtn.addEventListener("click",changeImage);
+holdBtn.addEventListener("click",switchPlayer);
