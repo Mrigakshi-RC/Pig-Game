@@ -5,6 +5,8 @@ let scoreTable={"user1":0,"user2":0};
 let currTable={"user1":0,"user2":0};
 let currentUser="user1";
 
+//TODO: fix actions after winner declaration
+
 function diceFunc(){
     let diceVal={1:"./dice-1.png",2:"./dice-2.png",3:"./dice-3.png",4:"./dice-4.png",5:"./dice-5.png",6:"./dice-6.png",}
     let score=Math.ceil(Math.random() * 6);
@@ -38,7 +40,7 @@ function holdScore(){
 
     if(scoreTable[currentUser]>=20)
     winGame();
-    
+
     switchPlayer();
 }
 
