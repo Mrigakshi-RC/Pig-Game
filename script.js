@@ -86,8 +86,8 @@ function startPlaying() {
   scoreTable = { user1: 0, user2: 0 };
   currTable = { user1: 0, user2: 0 };
   currentUser = 'user1';
-  document.querySelector('#score--0').innerText=0;
-  document.querySelector('#score--1').innerText=0;
+  document.querySelector('#score--0').innerText = 0;
+  document.querySelector('#score--1').innerText = 0;
   document.querySelector('.player--0').classList.add('player--active');
   document.querySelector('.player--1').classList.remove('player--active');
   document.querySelector('.player--0').classList.remove('player--winner');
